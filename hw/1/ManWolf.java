@@ -11,6 +11,10 @@
  * Wolf, Goat, Cabbage problem.
  */
 public class ManWolf{
+  /*
+  * Each state is represented by an integer, which corresponds to an
+  * index of the outer array of delta.
+  */
   private static final int q0 = 0;
   private static final int q1 = 1;
   private static final int q2 = 2;
@@ -23,8 +27,18 @@ public class ManWolf{
   private static final int q9 = 9;
   private static final int q10 = 10;
 
+  /*
+   * The current state.
+   */
   private int state;
 
+  /*
+   * A table-driven approach to the delta function.
+   * Each "row" represents the potential transititions from
+   * a given state, while the "columns" represent the potential
+   * characters that can facilitate this movement:
+   * 'n', 'w', 'g', and 'c' respectively.
+   */
   private static int[][] delta = {
           {q10, q10,  q1, q10},
           { q2, q10, q10, q10},

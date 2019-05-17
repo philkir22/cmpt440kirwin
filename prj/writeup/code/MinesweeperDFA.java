@@ -128,10 +128,10 @@ public class MinesweeperDFA{
    * Parameters:
    *  move: That character representing the current move.
    *
-   * Return value: 0 if move == 'n',
-   *               1 if move == 'w',
-   *               2 if move == 'q',
-   *               3 if move == 'c',
+   * Return value: 0 if move == 'a',
+   *               1 if move == 'b',
+   *               2 if move == 'c',
+   *               3 if move == 'd',
    *               -1 otherwise.
    */
   public int getIndex(char move){

@@ -21,19 +21,19 @@ public class driverDFA{
             "| a | c |\n"+
             "---------\n"
     );
-    System.out.println("Plese select a series of tiles as a string "+
+    System.out.println("Please select a series of tiles as a string "+
             "containing 'a', 'b', 'c', and 'd'.");
     String input = in.nextLine();
     MinesweeperDFA ms = new MinesweeperDFA();
     ms.reset();
     ms.placeMine();
     ms.process(input);
-    /*while(!(ms.accepting()) && !(ms.foundMine())){
+    while(!(ms.accepting()) && !(ms.foundMine())){
       System.out.println(buildGrid(ms));
       System.out.println("Game incomplete! Please select additional tiles.");
       input = in.nextLine();
       ms.process(input);
-    }*/
+    }
     if(ms.accepting()){
       System.out.println("You win!");
     }
